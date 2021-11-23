@@ -31,6 +31,8 @@ libraryDependencies += "org.apache.spark" %% "spark-sql" % "2.4.3"
 libraryDependencies += "org.apache.spark" %% "spark-sql-kafka-0-10" % "2.3.4"
 libraryDependencies += "org.apache.kafka" %% "kafka" % "2.1.0"
 
+scalacOptions += "-deprecation"
+
 // Here, `libraryDependencies` is a set of dependencies, and by using `+=`,
 // we're adding the scala-parser-combinators dependency to the set of dependencies
 // that sbt will go and fetch when it starts up.
