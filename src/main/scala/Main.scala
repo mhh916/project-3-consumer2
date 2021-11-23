@@ -13,12 +13,13 @@ object Main {
     val thread2 = new Thread {
         override def run {
              do{
+                print("\u001b[2J")
                 println("Please select an option")
                 println("1. Question 1\n2. Question 2\n3. Question 3\n4. Question 4\n5. Quit Application")
                 try {
                   
                   val option = scala.io.StdIn.readInt()
-                  println()
+                  print("\u001b[2J")
                   option match{
                     case 1 => {
                       kc.q1()
@@ -46,8 +47,7 @@ object Main {
       }
     }
     thread.start()
+    Thread.sleep(10000)
     thread2.start()
-    
-    println("Thank you")
   }
 }
